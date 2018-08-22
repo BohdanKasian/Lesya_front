@@ -735,7 +735,7 @@ body {
       margin-top: 0; }
 
 .slogan-block {
-  background: url("../images/slogan-bg.jpg") no-repeat 50% 0;
+  background: fixed url("../images/slogan-bg.jpg") no-repeat 50% 0;
   height: 499px; }
   .slogan-block .slogan-center {
     width: 1100px;
