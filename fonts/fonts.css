@@ -1,0 +1,68 @@
+@font-face {
+    font-family: 'Circe_light';
+    src: url('CRC35.eot');
+    src: local('☺'),
+    url('CRC35.woff') format('woff'),
+    url('CRC35.ttf') format('truetype'),
+    url('CRC35.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+	font-family: 'Circe_regular';
+	src: url('CRC55.eot');
+	src: local('☺'),
+    url('CRC55.woff') format('woff'),
+    url('CRC55.ttf') format('truetype'),
+    url('CRC55.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+    font-family: 'Circe_bold';
+    src: url('CRC65.eot');
+    src: local('☺'),
+    url('CRC65.woff') format('woff'),
+    url('CRC65.ttf') format('truetype'),
+    url('CRC65.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Romul';
+    src: url('ROMUL.eot');
+    src: local('☺'),
+    url('ROMUL.ttf') format('truetype'),
+    url('ROMUL.svg') format('svg'),
+    url('ROMUL.woff2') format('woff2'),
+    url('ROMUL.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'MYSLC_regular';
+    src: url('MYSLC.eot');
+    src: local('☺'),
+    url('MYSLC.ttf') format('truetype'),
+    url('MYSLC.svg') format('svg'),
+    url('MYSLC.woff2') format('woff2'),
+    url('MYSLC.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'MYSLC_bold';
+    src: url('MYSLC-BOLD.eot');
+    src: local('☺'),
+    url('MYSLC-BOLD.ttf') format('truetype'),
+    url('MYSLC-BOLD.svg') format('svg'),
+    url('MYSLC-BOLD.woff2') format('woff2'),
+    url('MYSLC-BOLD.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}

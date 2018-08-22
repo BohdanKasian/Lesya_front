@@ -1,0 +1,731 @@
+@import "hover"
+@import "mixin"
+
+$gold: #cb9530
+$grey: #303030
+$white: #fff
+
+$font-light: 'Circe_light', sans-serif
+$font-regular: 'Circe_regular', sans-serif
+$font-bold: 'Circe_bold', sans-serif
+$font-myslc-reg: 'MYSLC_regular', sans-serif
+$font-myslc-bold: 'MYSLC_bold', sans-serif
+$font-romul: 'Romul', sans-serif
+
+.clearfix
+  &:after
+    content: "."
+    visibility: hidden
+    display: block
+    height: 0
+    clear: both
+
+.hidden
+  visibility: hidden
+  @include respond-to(tablet)
+    visibility: visible
+
+.animated
+  @include respond-to(tablet)
+    animation: none
+
+.delay-1
+  -webkit-animation-delay: .5s
+  -moz-animation-delay: .5s
+  animation-delay: .5s
+  animation-duration: 1.5s
+
+body
+  font-family: 'Circe_regular', sans-serif
+  font-weight: 400
+
+.wrapper
+  position: relative
+  header
+    //position: fixed
+    bottom: 0
+    left: 0
+    right: 0
+    z-index: 10
+    font-size: 0
+    .logo-wrap
+      background: rgba(255,255,255,.9)
+      padding: 3px 0
+      width: 15%
+      display: inline-block
+      vertical-align: bottom
+      text-align: center
+      .logo
+        display: block
+        border-top: 1px solid #767676
+        border-bottom: 1px solid #767676
+        padding: 10px
+        img
+          width: 100%
+          max-width: 239px
+    nav
+      display: inline-block
+      background: rgba(255,255,255,.9)
+      padding: 3px 0
+      text-align: center
+      width: 74%
+      ul
+        border-top: 1px solid #767676
+        border-bottom: 1px solid #767676
+        padding: 11px 20px 9px
+        li
+          display: inline-block
+          margin-right: 35px
+          &:last-child
+            margin-right: 0
+          a
+            font-size: 15px
+            font-family: $font-myslc-bold
+            text-transform: uppercase
+            color: $grey
+            letter-spacing: -0.025em
+            &:hover
+              color: $gold
+        .active
+          a
+            color: $gold
+    .lang-wrap
+      display: inline-block
+      background: rgba(255,255,255,.9)
+      padding: 3px 0
+      text-align: right
+      width: 11%
+      .lang
+        border-top: 1px solid #767676
+        border-bottom: 1px solid #767676
+        padding: 11px 20px 9px 0
+        a
+          display: inline-block
+          margin-right: 10px
+          &:last-child
+            margin-right: 0
+          font-size: 15px
+          color: #959595
+          text-transform: uppercase
+          font-family: $font-myslc-bold
+        .active
+          color: $gold
+  .owl-carousel
+    position: relative
+    overflow: hidden
+    background-attachment: fixed
+    .slide-1,.slide-2,.slide-3
+      background: url("../images/slide-1.jpg") no-repeat 50% 0
+      height: 1080px
+      .text-center
+        width: 1100px
+        margin: 0 auto
+        padding-top: 250px
+        .text-wrap
+          width: 480px
+          background: rgba(255,255,255,.7)
+          padding: 25px
+          >.slogan
+            font-size: 36px
+            font-family: $font-romul
+            color: $grey
+          p+p
+            margin-top: 20px
+            color: $grey
+            font-size: 16px
+            line-height: 24px
+    .slide-2
+      background: url("../images/slide-2.jpg")
+    .slide-3
+      background: url("../images/slide-3.jpg")
+    .owl-nav
+      position: absolute
+      right: 50px
+      bottom: 30%
+      .owl-prev,.owl-next
+        width: 32px
+        height: 32px
+        background: rgba(255,255,255,.4)
+        padding-top: 9px
+        display: block
+        &:before
+          content: ""
+          background: url("../images/slider-arrows.png") no-repeat 0 0
+          width: 22px
+          height: 13px
+          display: block
+          margin: 0 auto
+        &:hover
+          background: $white
+        span
+          display: none
+      .owl-next
+        margin-top: 13px
+        padding-top: 11px
+        &:before
+          background-position: 100% 100%
+.collections
+  background: $white
+  padding: 59px 0 0
+  .collections-center
+    width: 1100px
+    margin: 0 auto
+    .title-wrap
+      position: relative
+      width: 966px
+      float: right
+      p
+        font-size: 65px
+        font-family: $font-romul
+        text-transform: uppercase
+        color: $grey
+        letter-spacing: -0.01em
+        float: left
+        position: relative
+        z-index: 1
+        &:after
+          content: ""
+          width: 310px
+          height: 2px
+          background: $gold
+          position: absolute
+          bottom: -14px
+          left: 43%
+      .title-descr
+        width: 428px
+        float: right
+        font-family: $font-romul
+        font-size: 14px
+        line-height: 18px
+        color: $grey
+        text-transform: uppercase
+        margin-top: 73px
+        letter-spacing: -0.01em
+        position: relative
+        z-index: 1
+      .title-shadow
+        font-size: 130px
+        color: #f8f8f8
+        font-family: $font-romul
+        text-transform: uppercase
+        position: absolute
+        top: 0
+        left: 30px
+        letter-spacing: -0.01em
+    .coll-img
+      background: url("../images/collections-img.jpg") no-repeat
+      width: 494px
+      height: 1004px
+      float: left
+      margin-left: -136px
+      margin-top: -84px
+    .coll-list
+      width: 715px
+      float: right
+      text-align: right
+      margin-top: 57px
+      li
+        width: 336px
+        height: 336px
+        @include border-radius(50%)
+        border: 2px solid #dadada
+        padding: 3px
+        display: inline-block
+        vertical-align: top
+        margin: 0 32px 29px 0
+        position: relative
+        @include transition(all,.4s,linear)
+        transition-duration: .4s
+        &:nth-child(even)
+          margin-right: 0
+        .img-wrap
+          width: 326px
+          height: 326px
+          @include border-radius(50%)
+          overflow: hidden
+          img
+            width: 100%
+            @include transition(all,.6s,linear)
+            transition-duration: .6s
+        .coll-link
+          position: absolute
+          top: 0
+          bottom: 0
+          left: 0
+          right: 0
+          z-index: 2
+        span
+          width: 326px
+          height: 326px
+          font-family: $font-romul
+          font-size: 23px
+          text-transform: uppercase
+          color: $white
+          letter-spacing: -0.01em
+          position: absolute
+          top: 3px
+          left: 0
+          right: 0
+          bottom: 0
+          margin: 0 auto
+          text-align: center
+          padding-top: 45%
+          z-index: 1
+          @include border-radius(50%)
+          background: rgba(32,32,32,.8)
+          opacity: 0
+          @include transition(all,.5s,linear)
+          transition-duration: .5s
+        &:hover
+          border-color: $gold
+          span
+            opacity: 1
+          img
+            @include transform-scale
+    .go-to-category
+      font-size: 18px
+      color: $grey
+      text-transform: uppercase
+      padding: 6px 15px 2px
+      border: 1px solid rgba(0,0,0,.3)
+      float: right
+      position: relative
+      margin-top: 28px
+      margin-right: 32px
+      @include transition(all,.4s,linear)
+      transition-duration: .4s
+      &:after
+        content: ""
+        width: 47px
+        height: 2px
+        background: $gold
+        position: absolute
+        top: 16px
+        right: -40px
+        @include transition(all,.4s,linear)
+        transition-duration: .4s
+      &:hover
+        background: $gold
+        color: $white
+        border-color: $gold
+        &:after
+          background: $grey
+.about
+  background: fixed url("../images/about-bg.jpg") no-repeat 50% 0
+  padding: 61px 0 70px
+  .about-center
+    width: 1100px
+    margin: 0 auto
+    .title-wrap
+      position: relative
+      width: 855px
+      margin: 0 auto 82px
+      p
+        font-size: 65px
+        font-family: $font-romul
+        text-transform: uppercase
+        color: $white
+        letter-spacing: -0.01em
+        float: left
+        position: relative
+        z-index: 1
+        &:after
+          content: ""
+          width: 310px
+          height: 2px
+          background: $gold
+          position: absolute
+          bottom: -14px
+          left: 38%
+      .title-descr
+        width: 428px
+        float: right
+        font-family: $font-romul
+        font-size: 14px
+        line-height: 18px
+        color: $white
+        text-transform: uppercase
+        margin-top: 73px
+        letter-spacing: -0.01em
+        position: relative
+        z-index: 1
+      .title-shadow
+        font-size: 130px
+        color: rgba(43,43,43,.4)
+        font-family: $font-romul
+        text-transform: uppercase
+        position: absolute
+        top: 0
+        left: 30px
+        letter-spacing: -0.01em
+    .text-about
+      width: 490px
+      display: inline-block
+      vertical-align: top
+      margin-right: 52px
+      p
+        font-size: 16px
+        color: $white
+        line-height: 24px
+        margin-bottom: 12px
+        font-family: $font-light
+      .go-to-category
+        font-size: 18px
+        color: $white
+        text-transform: uppercase
+        padding: 6px 15px 2px
+        border: 1px solid rgba(255,255,255,.3)
+        position: relative
+        margin-top: 90px
+        margin-right: -84px
+        float: right
+        @include transition(all,.4s,linear)
+        transition-duration: .4s
+        &:after
+          content: ""
+          width: 47px
+          height: 2px
+          background: $gold
+          position: absolute
+          top: 16px
+          right: -40px
+          @include transition(all,.4s,linear)
+          transition-duration: .4s
+        &:hover
+          background: $gold
+          color: $white
+          border-color: $gold
+          &:after
+            background: $white
+    .img-about
+      background: url("../images/about-img.png") no-repeat
+      width: 542px
+      height: 572px
+      display: inline-block
+      margin-top: -4px
+.news
+  background: $white
+  padding: 48px 0 59px
+  .news-center
+    width: 1100px
+    margin: 0 auto
+    .title-wrap
+      position: relative
+      width: 900px
+      margin: 0 auto
+      p
+        font-size: 65px
+        font-family: $font-romul
+        text-transform: uppercase
+        color: $grey
+        letter-spacing: -0.01em
+        float: left
+        position: relative
+        z-index: 1
+        &:after
+          content: ""
+          width: 310px
+          height: 2px
+          background: $gold
+          position: absolute
+          bottom: -14px
+          left: 36%
+      .title-descr
+        width: 428px
+        float: right
+        font-family: $font-romul
+        font-size: 14px
+        line-height: 18px
+        color: $grey
+        text-transform: uppercase
+        margin-top: 73px
+        letter-spacing: -0.01em
+        position: relative
+        z-index: 1
+      .title-shadow
+        font-size: 130px
+        color: #f8f8f8
+        font-family: $font-romul
+        text-transform: uppercase
+        position: absolute
+        top: 0
+        left: 30px
+        letter-spacing: -0.01em
+    .news-wrap
+      margin-top: 74px
+      font-size: 0
+      text-align: center
+      .main-news,.sub-news
+        width: 540px
+        height: 650px
+        display: inline-block
+        vertical-align: top
+        position: relative
+        text-align: left
+        .title-news
+          position: absolute
+          bottom: 0
+          left: 0
+          right: 0
+          padding: 18px 21px 20px
+          background: rgba(0,0,0,.5)
+          a
+            font-size: 18px
+            line-height: 30px
+            color: $white
+            text-transform: uppercase
+            font-family: $font-bold
+            display: inline-block
+            margin-bottom: 5px
+            &:hover
+              text-decoration: underline
+          p
+            font-size: 14px
+            line-height: 18px
+            color: $white
+        img
+          width: 100%
+      .sub-news
+        height: auto
+        position: static
+        .item
+          height: 325px
+          position: relative
+    .go-to-category
+      font-size: 18px
+      color: $grey
+      text-transform: uppercase
+      padding: 6px 15px 2px
+      border: 1px solid rgba(0,0,0,.3)
+      position: relative
+      margin-top: 46px
+      margin-right: 50px
+      float: right
+      @include transition(all,.4s,linear)
+      transition-duration: .4s
+      &:after
+        content: ""
+        width: 47px
+        height: 2px
+        background: $gold
+        position: absolute
+        top: 16px
+        right: -40px
+        @include transition(all,.4s,linear)
+        transition-duration: .4s
+      &:hover
+        background: $gold
+        color: $white
+        border-color: $gold
+        &:after
+          background: $grey
+.for-partners
+  .partners-title-wrap
+    background: fixed url("../images/for-partners-bg.jpg") no-repeat 50% 0
+    padding: 68px 0 49px
+    .partners-center
+      width: 1100px
+      margin: 0 auto
+      .title-wrap
+        position: relative
+        width: 952px
+        margin: 0 auto
+        p
+          font-size: 65px
+          font-family: $font-romul
+          text-transform: uppercase
+          color: $white
+          letter-spacing: -0.01em
+          float: left
+          position: relative
+          z-index: 1
+          &:after
+            content: ""
+            width: 310px
+            height: 2px
+            background: $gold
+            position: absolute
+            bottom: -14px
+            left: 38%
+        .title-descr
+          width: 428px
+          float: right
+          font-family: $font-romul
+          font-size: 14px
+          line-height: 18px
+          color: $white
+          text-transform: uppercase
+          margin-top: 73px
+          letter-spacing: -0.01em
+          position: relative
+          z-index: 1
+        .title-shadow
+          font-size: 130px
+          color: rgba(0,0,0,.15)
+          font-family: $font-romul
+          text-transform: uppercase
+          position: absolute
+          top: 0
+          left: 30px
+          letter-spacing: -0.01em
+      .go-to-category
+        font-size: 18px
+        color: $white
+        text-transform: uppercase
+        padding: 6px 15px 2px
+        border: 1px solid rgba(255,255,255,.3)
+        position: relative
+        margin-top: 78px
+        margin-right: 40px
+        float: right
+        @include transition(all,.4s,linear)
+        transition-duration: .4s
+        &:after
+          content: ""
+          width: 47px
+          height: 2px
+          background: $gold
+          position: absolute
+          top: 16px
+          right: -40px
+          @include transition(all,.4s,linear)
+          transition-duration: .4s
+        &:hover
+          background: $gold
+          color: $white
+          border-color: $gold
+          &:after
+            background: $white
+  .partners-info
+    padding: 53px 0 55px
+    ul
+      width: 1100px
+      margin: 0 auto
+      li
+        width: 305px
+        display: inline-block
+        vertical-align: top
+        margin-right: 82px
+        &:last-child
+          margin-right: 0
+        >.p-title
+          font-size: 24px
+          color: $gold
+          font-family: $font-bold
+          text-transform: uppercase
+          letter-spacing: -0.01em
+          margin-bottom: 17px
+        p
+          font-size: 15px
+          line-height: 18px
+          color: $grey
+.map
+  background: url("../images/map.jpg") no-repeat 50% 0
+  height: 426px
+  padding-top: 100px
+  .pin-shop
+    width: 160px
+    background: $white
+    border: 2px solid $gold
+    @include border-radius(4px)
+    padding: 18px 14px 14px
+    position: relative
+    text-align: center
+    margin: 0 auto
+    &:after
+      content: ""
+      width: 0
+      height: 0
+      border-style: solid
+      border-width: 15px 8.5px 0 8.5px
+      border-color: #cb9530 transparent transparent transparent
+      position: absolute
+      bottom: -15px
+      left: 0
+      right: 0
+      margin: 0 auto
+    .logo
+      background: url("../images/logo.png") no-repeat
+      width: 127px
+      height: 53px
+      display: block
+      background-size: contain
+    p,a
+      font-size: 14px
+      line-height: 16px
+      color: $grey
+      margin-top: 5px
+    a
+      display: inline-block
+      margin-top: 0
+.slogan-block
+  background: url("../images/slogan-bg.jpg") no-repeat 50% 0
+  height: 499px
+  .slogan-center
+    width: 1100px
+    margin: 0 auto
+    padding-top: 154px
+    p
+      width: 540px
+      font-size: 48px
+      line-height: 48px
+      color: $white
+      text-transform: uppercase
+      font-family: $font-romul
+      letter-spacing: -0.01em
+footer
+  background: $white
+  padding: 4px 0
+  .footer-wrap
+    border-top: 1px solid #767676
+    border-bottom: 1px solid #767676
+    padding: 13px 0 9px
+    .footer-center
+      width: 1100px
+      margin: 0 auto
+      .f-links
+        width: 280px
+        display: inline-block
+        vertical-align: top
+        a
+          font-size: 14px
+          color: $grey
+          margin-right: 15px
+          &:hover
+            text-decoration: underline
+      p
+        font-size: 14px
+        color: $grey
+        display: inline-block
+        vertical-align: top
+        margin: 0 217px
+      p+p
+        margin: 0
+        display: inline-block
+        a
+          color: $gold
+          font-size: 14px
+          &:hover
+            text-decoration: underline
+
+#back-top
+  position: fixed
+  bottom: 30px
+  right: 2%
+  a
+    width: 37px
+    height: 37px
+    background: rgba(0,0,0,.3)
+    display: block
+    padding-top: 12px
+    transition: all,.4s,ease
+    transition-duration: .4s
+    &:before
+      content: ""
+      background: url("../images/up-arrow.png")
+      width: 23px
+      height: 13px
+      display: block
+      margin: 0 auto 4px
+    &:hover
+      background: $gold

@@ -1,0 +1,127 @@
+@mixin transition($property, $duration, $timing)
+  -webkit-transition: $property, $duration, $timing
+  -moz-transition: $property, $duration, $timing
+  -o-transition: $property, $duration, $timing
+  transition: $property, $duration, $timing
+
+@mixin border-radius($radius)
+  -moz-border-radius: $radius
+  -webkit-border-radius: $radius
+  -khtml-border-radius: $radius
+  -o-border-radius: $radius
+  -ms-border-radius: $radius
+  border-radius: $radius
+
+@mixin border-top-left-radius($radius)
+  -moz-border-top-left-radius: $radius
+  -webkit-border-top-left-radius: $radius
+  -khtml-border-top-left-radius: $radius
+  -o-border-top-left-radius: $radius
+  -ms-border-top-left-radius: $radius
+  border-top-left-radius: $radius
+
+@mixin border-top-right-radius($radius)
+  -moz-border-top-right-radius: $radius
+  -webkit-border-top-right-radius: $radius
+  -khtml-border-top-right-radius: $radius
+  -o-border-top-right-radius: $radius
+  -ms-border-top-right-radius: $radius
+  border-top-right-radius: $radius
+
+@mixin border-bottom-left-radius($radius)
+  -moz-border-bottom-left-radius: $radius
+  -webkit-border-bottom-left-radius: $radius
+  -khtml-border-bottom-left-radius: $radius
+  -o-border-bottom-left-radius: $radius
+  -ms-border-bottom-left-radius: $radius
+  border-bottom-left-radius: $radius
+
+@mixin border-bottom-right-radius($radius)
+  -moz-border-bottom-right-radius: $radius
+  -webkit-border-bottom-right-radius: $radius
+  -khtml-border-bottom-right-radius: $radius
+  -o-border-bottom-right-radius: $radius
+  -ms-border-bottom-right-radius: $radius
+  border-bottom-right-radius: $radius
+
+@mixin translateY($value)
+  -webkit-transform: translateY($value)
+  -moz-transform: translateY($value)
+  -o-transform: translateY($value)
+  -ms-transform: translateY($value)
+  transform: translateY($value)
+
+@mixin transform-r($value)
+  transform: rotate($value)
+  -webkit-transform: rotate($value)
+  -moz-transform: rotate($value)
+  -o-transform: rotate($value)
+  -ms-transform: rotate($value)
+
+@mixin transform-scale
+  -webkit-transform: scale(1.2)
+  -moz-transform: scale(1.2)
+  -o-transform: scale(1.2)
+  -ms-transform: scale(1.2)
+  transform: scale(1.2)
+
+@mixin placeholder-search
+  &::-webkit-input-placeholder
+    color: #c6c6c6
+    font-size: 16px
+  &:-moz-placeholder
+    color: #c6c6c6
+    font-size: 16px
+  &::-moz-placeholder
+    color: #c6c6c6
+    font-size: 16px
+  &:-ms-input-placeholder
+    color: #c6c6c6
+    font-size: 16px
+
+@mixin placeholder-feedback
+  &::-webkit-input-placeholder
+    color: #b2d4dc
+    font-size: 14px
+  &:-moz-placeholder
+    color: #b2d4dc
+    font-size: 14px
+  &::-moz-placeholder
+    color: #b2d4dc
+    font-size: 14px
+  &:-ms-input-placeholder
+    color: #b2d4dc
+    font-size: 14px
+
+@mixin placeholder-review
+  &::-webkit-input-placeholder
+    color: #bbbbbb
+    font-size: 15px
+  &:-moz-placeholder
+    color: #bbbbbb
+    font-size: 15px
+  &::-moz-placeholder
+    color: #bbbbbb
+    font-size: 15px
+  &:-ms-input-placeholder
+    color: #bbbbbb
+    font-size: 15px
+
+$ex-small: 500px
+$small: 768px
+$medium: 992px
+$large: 1150px
+
+@mixin respond-to($media)
+  @if $media == mobile
+    @media only screen and (max-width: $ex-small)
+      @content
+  @else if $media == small-tablet
+    @media only screen and (max-width: $small)
+      @content
+  @else if $media == tablet
+    @media only screen and (max-width: $medium)
+      @content
+  @else if $media == desktop
+    @media only screen and (max-width: $large)
+      @content
