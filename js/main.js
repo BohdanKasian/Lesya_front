@@ -5,21 +5,9 @@ function showScroll(){
         if(scroller > 2500) {
             $(".vant-slogan-down").addClass("fadeInDown").removeClass("hidden");
         }
-        if(scroller > 2500) {
-            $(".vant-img-zoom").addClass("zoomIn").removeClass("hidden");
-        }
-        if(scroller > 3700) {
-            $(".zoom1").addClass("zoomIn").removeClass("hidden");
-        }
     } else { // Height less than 900
         if(scroller > 2500) {
             $(".vant-slogan-down").addClass("fadeInDown").removeClass("hidden");
-        }
-        if(scroller > 2500) {
-            $(".vant-img-zoom").addClass("zoomIn").removeClass("hidden");
-        }
-        if(scroller > 3700) {
-            $(".zoom1").addClass("zoomIn").removeClass("hidden");
         }
     }
 
@@ -44,6 +32,12 @@ $(document).ready(function() {
         autoplay: false
     });
 
+    // Remove animation class
+    if ( $(window).width() < 1200) {
+        $('.collections').removeClass('scrollme');
+    }
+    else {}
+
     // Slider on full height
     function setHeight() {
         $('#main-slider').css({
@@ -53,9 +47,13 @@ $(document).ready(function() {
     setHeight();
     $(window).resize( setHeight );
 
-    // Animate top
-    $(".slogandown").addClass("fadeInDown").removeClass("hidden");
-    $(".statleft").addClass("fadeInLeft").removeClass("hidden");
+    // Anchors
+    $('.scroller a').click(function(){
+        var el = $(this).attr('href');
+        $('html,body').animate({
+            scrollTop: $(el).offset().top}, 1000);
+        return false;
+    });
 
     // Scroll top
     $("#back-top,#back-top-zp").hide();
