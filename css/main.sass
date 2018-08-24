@@ -1002,12 +1002,12 @@ footer
         border-color: $gold
         &:after
           background: $grey
-    .seo
-      margin-top: 31px
-      font-size: 14px
-      line-height: 18px
-      color: #b0b0b0
-      float: right
+.seo
+  margin-top: 31px
+  font-size: 14px
+  line-height: 18px
+  color: #b0b0b0
+  float: right
 footer
   padding: 0
   .main-footer
@@ -1123,3 +1123,172 @@ footer
           margin-right: 20px
           &:hover
             text-decoration: underline
+
+// Page Product
+.inner-content
+  .content-center
+    .product-wrap
+      .photo-slider
+        width: 526px
+        display: inline-block
+        vertical-align: top
+        padding-right: 46px
+        border-right: 1px solid #e8e8e8
+        .thumbnails
+          border: none
+          margin: 0
+          height: 150px
+          .slides
+            >li
+              height: 150px
+              overflow: hidden
+              &:hover
+                cursor: pointer
+                img
+                  opacity: .7
+            .flex-active-slide
+              img
+                border: 1px solid #767676
+        .big-image
+          border: none
+          margin-bottom: 15px
+      .prod-description
+        width: 545px
+        display: inline-block
+        margin-left: 24px
+        h1
+          font-family: $font-myslc-bold
+          font-size: 30px
+          text-transform: uppercase
+          color: $gold
+          margin-bottom: 25px
+          margin-top: -7px
+        table
+          width: 100%
+          border-bottom: 1px solid #e8e8e8
+          tbody
+            font-size: 14px
+            line-height: 18px
+            color: $grey
+            tr
+              &:nth-child(odd)
+                background: #f5f5f5
+              td
+                padding: 11px 10px 10px 0
+                width: 40%
+                &:first-child
+                  width: 15%
+                  padding: 15px 0 13px 16px
+                ul
+                  display: inline-block
+                  vertical-align: top
+                  li
+                    display: inline-block
+                    vertical-align: top
+                    button
+                      width: 37px
+                      height: 30px
+                      background: $white
+                      border: 1px solid #e8e8e8
+                      text-align: center
+                      font-size: 14px
+                      color: $grey
+                      padding-top: 3px
+                      &:hover
+                        background: #f9f9f9
+                    .active
+                      background: $gold
+                      border-color: $gold
+                      color: $white
+                      &:hover
+                        background: $gold
+                        color: $white
+                .size
+                  font-size: 14px
+                  color: $gold
+                  display: inline-block
+                  vertical-align: top
+                  text-decoration: underline
+                  margin-top: 6px
+                  letter-spacing: 0.01em
+                  margin-left: 12px
+                  &:hover
+                    text-decoration: none
+        .similar-products
+          margin-top: 29px
+          p
+            font-size: 16px
+            font-family: $font-bold
+            text-transform: uppercase
+            color: $grey
+          ul
+            margin-top: 17px
+            li
+              width: 150px
+              height: 150px
+              border: 1px solid #e8e8e8
+              display: inline-block
+              vertical-align: top
+              margin-right: 16px
+              text-align: center
+              &:hover
+                border-color: $gold
+              img
+                height: 100%
+        .order
+          margin-top: 28px
+          p
+            font-size: 16px
+            font-family: $font-bold
+            text-transform: uppercase
+            color: $grey
+            margin-bottom: 12px
+          .wholesale,.retail
+            width: 179px
+            display: inline-block
+            vertical-align: top
+            background: $gold
+            padding: 6px 0 4px
+            text-align: center
+            font-size: 14px
+            color: $white
+            text-transform: uppercase
+            margin-right: 7px
+            @include transition(all,.4s,linear)
+            transition-duration: .4s
+            &:hover
+              background: $grey
+          span
+            font-size: 14px
+            line-height: 16px
+            color: $grey
+            display: block
+            margin-top: 14px
+        .go-back
+          font-size: 16px
+          color: $grey
+          text-transform: uppercase
+          padding: 8px 15px 3px
+          border: 1px solid rgba(0,0,0,.3)
+          position: relative
+          margin-top: 37px
+          margin-right: 39px
+          float: right
+          @include transition(all,.4s,linear)
+          transition-duration: .4s
+          &:after
+            content: ""
+            width: 47px
+            height: 2px
+            background: $gold
+            position: absolute
+            top: 16px
+            right: -40px
+            @include transition(all,.4s,linear)
+            transition-duration: .4s
+          &:hover
+            background: $gold
+            color: $white
+            border-color: $gold
+            &:after
+              background: $grey

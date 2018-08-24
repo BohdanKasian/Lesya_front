@@ -1101,12 +1101,13 @@ footer {
         border-color: #cb9530; }
         .inner-content .content-center .go-back:hover:after {
           background: #303030; }
-    .inner-content .content-center .seo {
-      margin-top: 31px;
-      font-size: 14px;
-      line-height: 18px;
-      color: #b0b0b0;
-      float: right; }
+
+.seo {
+  margin-top: 31px;
+  font-size: 14px;
+  line-height: 18px;
+  color: #b0b0b0;
+  float: right; }
 
 footer {
   padding: 0; }
@@ -1230,5 +1231,176 @@ footer {
           margin-right: 20px; }
           footer .subfooter .subfooter-center .f-links a:hover {
             text-decoration: underline; }
+
+.inner-content .content-center .product-wrap .photo-slider {
+  width: 526px;
+  display: inline-block;
+  vertical-align: top;
+  padding-right: 46px;
+  border-right: 1px solid #e8e8e8; }
+  .inner-content .content-center .product-wrap .photo-slider .thumbnails {
+    border: none;
+    margin: 0;
+    height: 150px; }
+    .inner-content .content-center .product-wrap .photo-slider .thumbnails .slides > li {
+      height: 150px;
+      overflow: hidden; }
+      .inner-content .content-center .product-wrap .photo-slider .thumbnails .slides > li:hover {
+        cursor: pointer; }
+        .inner-content .content-center .product-wrap .photo-slider .thumbnails .slides > li:hover img {
+          opacity: 0.7; }
+    .inner-content .content-center .product-wrap .photo-slider .thumbnails .slides .flex-active-slide img {
+      border: 1px solid #767676; }
+  .inner-content .content-center .product-wrap .photo-slider .big-image {
+    border: none;
+    margin-bottom: 15px; }
+.inner-content .content-center .product-wrap .prod-description {
+  width: 545px;
+  display: inline-block;
+  margin-left: 24px; }
+  .inner-content .content-center .product-wrap .prod-description h1 {
+    font-family: "MYSLC_bold", sans-serif;
+    font-size: 30px;
+    text-transform: uppercase;
+    color: #cb9530;
+    margin-bottom: 25px;
+    margin-top: -7px; }
+  .inner-content .content-center .product-wrap .prod-description table {
+    width: 100%;
+    border-bottom: 1px solid #e8e8e8; }
+    .inner-content .content-center .product-wrap .prod-description table tbody {
+      font-size: 14px;
+      line-height: 18px;
+      color: #303030; }
+      .inner-content .content-center .product-wrap .prod-description table tbody tr:nth-child(odd) {
+        background: #f5f5f5; }
+      .inner-content .content-center .product-wrap .prod-description table tbody tr td {
+        padding: 11px 10px 10px 0;
+        width: 40%; }
+        .inner-content .content-center .product-wrap .prod-description table tbody tr td:first-child {
+          width: 15%;
+          padding: 15px 0 13px 16px; }
+        .inner-content .content-center .product-wrap .prod-description table tbody tr td ul {
+          display: inline-block;
+          vertical-align: top; }
+          .inner-content .content-center .product-wrap .prod-description table tbody tr td ul li {
+            display: inline-block;
+            vertical-align: top; }
+            .inner-content .content-center .product-wrap .prod-description table tbody tr td ul li button {
+              width: 37px;
+              height: 30px;
+              background: #fff;
+              border: 1px solid #e8e8e8;
+              text-align: center;
+              font-size: 14px;
+              color: #303030;
+              padding-top: 3px; }
+              .inner-content .content-center .product-wrap .prod-description table tbody tr td ul li button:hover {
+                background: #f9f9f9; }
+            .inner-content .content-center .product-wrap .prod-description table tbody tr td ul li .active {
+              background: #cb9530;
+              border-color: #cb9530;
+              color: #fff; }
+              .inner-content .content-center .product-wrap .prod-description table tbody tr td ul li .active:hover {
+                background: #cb9530;
+                color: #fff; }
+        .inner-content .content-center .product-wrap .prod-description table tbody tr td .size {
+          font-size: 14px;
+          color: #cb9530;
+          display: inline-block;
+          vertical-align: top;
+          text-decoration: underline;
+          margin-top: 6px;
+          letter-spacing: 0.01em;
+          margin-left: 12px; }
+          .inner-content .content-center .product-wrap .prod-description table tbody tr td .size:hover {
+            text-decoration: none; }
+  .inner-content .content-center .product-wrap .prod-description .similar-products {
+    margin-top: 29px; }
+    .inner-content .content-center .product-wrap .prod-description .similar-products p {
+      font-size: 16px;
+      font-family: "Circe_bold", sans-serif;
+      text-transform: uppercase;
+      color: #303030; }
+    .inner-content .content-center .product-wrap .prod-description .similar-products ul {
+      margin-top: 17px; }
+      .inner-content .content-center .product-wrap .prod-description .similar-products ul li {
+        width: 150px;
+        height: 150px;
+        border: 1px solid #e8e8e8;
+        display: inline-block;
+        vertical-align: top;
+        margin-right: 16px;
+        text-align: center; }
+        .inner-content .content-center .product-wrap .prod-description .similar-products ul li:hover {
+          border-color: #cb9530; }
+        .inner-content .content-center .product-wrap .prod-description .similar-products ul li img {
+          height: 100%; }
+  .inner-content .content-center .product-wrap .prod-description .order {
+    margin-top: 28px; }
+    .inner-content .content-center .product-wrap .prod-description .order p {
+      font-size: 16px;
+      font-family: "Circe_bold", sans-serif;
+      text-transform: uppercase;
+      color: #303030;
+      margin-bottom: 12px; }
+    .inner-content .content-center .product-wrap .prod-description .order .wholesale, .inner-content .content-center .product-wrap .prod-description .order .retail {
+      width: 179px;
+      display: inline-block;
+      vertical-align: top;
+      background: #cb9530;
+      padding: 6px 0 4px;
+      text-align: center;
+      font-size: 14px;
+      color: #fff;
+      text-transform: uppercase;
+      margin-right: 7px;
+      -webkit-transition: all, 0.4s, linear;
+      -moz-transition: all, 0.4s, linear;
+      -o-transition: all, 0.4s, linear;
+      transition: all, 0.4s, linear;
+      transition-duration: 0.4s; }
+      .inner-content .content-center .product-wrap .prod-description .order .wholesale:hover, .inner-content .content-center .product-wrap .prod-description .order .retail:hover {
+        background: #303030; }
+    .inner-content .content-center .product-wrap .prod-description .order span {
+      font-size: 14px;
+      line-height: 16px;
+      color: #303030;
+      display: block;
+      margin-top: 14px; }
+  .inner-content .content-center .product-wrap .prod-description .go-back {
+    font-size: 16px;
+    color: #303030;
+    text-transform: uppercase;
+    padding: 8px 15px 3px;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    position: relative;
+    margin-top: 37px;
+    margin-right: 39px;
+    float: right;
+    -webkit-transition: all, 0.4s, linear;
+    -moz-transition: all, 0.4s, linear;
+    -o-transition: all, 0.4s, linear;
+    transition: all, 0.4s, linear;
+    transition-duration: 0.4s; }
+    .inner-content .content-center .product-wrap .prod-description .go-back:after {
+      content: "";
+      width: 47px;
+      height: 2px;
+      background: #cb9530;
+      position: absolute;
+      top: 16px;
+      right: -40px;
+      -webkit-transition: all, 0.4s, linear;
+      -moz-transition: all, 0.4s, linear;
+      -o-transition: all, 0.4s, linear;
+      transition: all, 0.4s, linear;
+      transition-duration: 0.4s; }
+    .inner-content .content-center .product-wrap .prod-description .go-back:hover {
+      background: #cb9530;
+      color: #fff;
+      border-color: #cb9530; }
+      .inner-content .content-center .product-wrap .prod-description .go-back:hover:after {
+        background: #303030; }
 
 /*# sourceMappingURL=main.css.map */

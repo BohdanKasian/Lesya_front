@@ -20,6 +20,27 @@ function showScroll(){
     }
 }
 
+$(window).load(function() {
+    $('#carousel').flexslider({
+        animation: "slide",
+        itemWidth: 102,
+        controlNav: false,
+        animationLoop: false,
+        itemMargin: 15,
+        maxItems: 3,
+        slideshow: false,
+        asNavFor: '#slider'
+    });
+
+    $('#slider').flexslider({
+        animation: "slide",
+        controlNav: false,
+        animationLoop: false,
+        slideshow: false,
+        sync: "#carousel"
+    });
+});
+
 $(document).ready(function() {
     // Slider
     $("#main-slider").owlCarousel({
@@ -37,6 +58,8 @@ $(document).ready(function() {
         $('.collections').removeClass('scrollme');
     }
     else {}
+
+    $('.cloud-zoom, .cloud-zoom-gallery').CloudZoom();
 
     // Slider on full height
     function setHeight() {
