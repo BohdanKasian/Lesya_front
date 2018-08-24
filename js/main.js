@@ -1,23 +1,31 @@
 function showScroll(){
-    scroller=$(window).scrollTop();
-    height=$(window).height();
-    if(height>='900'){
-        if(scroller > 2500) {
-            $(".vant-slogan-down").addClass("fadeInDown").removeClass("hidden");
-        }
-    } else { // Height less than 900
-        if(scroller > 2500) {
-            $(".vant-slogan-down").addClass("fadeInDown").removeClass("hidden");
-        }
-    }
 
-    // Scroll fixed menu
-    scroller=$(window).scrollTop();
-    if(scroller>80){
-        $(".fixed").addClass("head-scrolled");
-    } else {
-        $(".fixed").removeClass("head-scrolled");
+    let scroller = $(window).scrollTop();
+    let height = $(window).height();
+    // console.log("curr:" + scroller + ", height: "+ height);
+
+    // Menu mod
+    let menu = $("header");
+    if(scroller > 1) {
+        menu.css("bottom", scroller + "px");
+        heightFix = height - 46;
+        if(scroller >= heightFix){
+            menu.addClass("header-scroll");
+        }
+        if(scroller < height){
+            menu.removeClass("header-scroll");
+        }
+        if(scroller < 23){
+            menu.css("bottom", 0);
+        }
     }
+}
+
+// Slider on full height
+function setHeight() {
+    $('#main-slider').css({
+        height: $(window).height() + 'px'
+    });
 }
 
 $(window).load(function() {
@@ -50,7 +58,11 @@ $(document).ready(function() {
         loop: true,
         nav: true,
         dots: false,
-        autoplay: false
+        autoplay: false,
+        itemsDesktop: [1300,1],
+        itemsDesktopSmall: [992,1],
+        itemsTablet: [850,1],
+        itemsTabletSmall: [600,1]
     });
 
     // Remove animation class
@@ -59,16 +71,17 @@ $(document).ready(function() {
     }
     else {}
 
-    $('.cloud-zoom, .cloud-zoom-gallery').CloudZoom();
+    //$('.cloud-zoom, .cloud-zoom-gallery').CloudZoom();
 
-    // Slider on full height
-    function setHeight() {
-        $('#main-slider').css({
-            height: $(window).height() + 'px'
-        });
-    }
     setHeight();
     $(window).resize( setHeight );
+
+    // Drop
+    $(".li-drop").hover(function(){
+        $(this).find(".drop").stop(0, 1).fadeIn(300);
+    }, function(){
+        $(this).find(".drop").stop(0, 1).fadeOut(50);
+    });
 
     // Anchors
     $('.scroller a').click(function(){
@@ -106,7 +119,7 @@ $(document).ready(function() {
     });
 
     // Modal
-    $("#modal,#modal-business").on("click touchend", function (e) {
+    $("#modal").on("click touchend", function (e) {
         e.preventDefault();
         $("#overlay").fadeIn(400, function () {
             $("#modal-window")

@@ -25,11 +25,39 @@
                     <nav>
                         <ul>
                             <li><a href="#">Главная</a></li>
-                            <li class="active"><a href="#">Коллекции</a></li>
-                            <li><a href="#">О нас</a></li>
+                            <li class="active li-drop">
+                                <a href="#">Коллекции</a>
+                                <ul class="drop">
+                                    <li><a href="#">Весна-лето 2018</a></li>
+                                    <li><a href="#">Вечернее 2018</a></li>
+                                    <li><a href="#">Осень-зима 2017-2018</a></li>
+                                    <li><a href="#">Категории</a></li>
+                                </ul>
+                            </li>
+                            <li class="li-drop">
+                                <a href="#">О нас</a>
+                                <ul class="drop">
+                                    <li><a href="#">О компании</a></li>
+                                    <li><a href="#">История успеха</a></li>
+                                    <li><a href="#">О нас говорят</a></li>
+                                </ul>
+                            </li>
                             <li><a href="#">Новости</a></li>
-                            <li><a href="#">Партнерам</a></li>
-                            <li><a href="#">Где купить</a></li>
+                            <li class="li-drop">
+                                <a href="#">Партнерам</a>
+                                <ul class="drop">
+                                    <li><a href="#">Оптовым партнерам</a></li>
+                                    <li><a href="#">Сотрудничество</a></li>
+                                    <li><a href="#">PR и медиа</a></li>
+                                </ul>
+                            </li>
+                            <li class="li-drop">
+                                <a href="#">Где купить</a>
+                                <ul class="drop">
+                                    <li><a href="#">Магазины/партнеры</a></li>
+                                    <li><a href="#">Интернет-магазины</a></li>
+                                </ul>
+                            </li>
                             <li><a href="#">Контакты</a></li>
                         </ul>
                     </nav>
@@ -232,7 +260,7 @@
                         <p class="title">Контакты</p>
                         <a class="tel" href="tel:+380472505457">+38 0472 50-54-57</a>
                         <a class="tel" href="tel:+380949857457">+38 094 985-74-57</a>
-                        <a class="order-call" href="#">Заказать звонок</a>
+                        <a class="order-call" href="#" id="modal">Заказать звонок</a>
                         <p class="address">г. Черкассы, ул. Леси Украинки 4</p>
                         <a class="f-map" href="#">Найти на карте</a>
                         <div class="f-social">
@@ -254,6 +282,17 @@
                 </div>
             </div>
         </footer>
+        <div id="modal-window" class="modal-window">
+            <span id="close-button" class="close-button"></span>
+            <h5>Заказать обратный звонок</h5>
+            <p>Оставьте свои контактные данные и мы Вам перезвоним!</p>
+            <form action="#">
+                <input type="text" placeholder="Имя"/>
+                <input type="text" placeholder="Номер телефона"/>
+                <button type="submit">Заказать звонок</button>
+            </form>
+        </div>
+        <div id="overlay" class="overlay"></div>
         <script src="https://cdn.realcodeit.com/js/jquery-2.1.3.min.js"></script>
         <script src="js/cloud-zoom.1.0.2.min.js"></script>
         <script src="https://cdn.realcodeit.com/js/jquery.fancybox.min.js"></script>

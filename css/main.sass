@@ -42,7 +42,7 @@ body
 .wrapper
   position: relative
   header
-    //position: fixed
+    position: fixed
     bottom: 0
     left: 0
     right: 0
@@ -51,10 +51,13 @@ body
     .logo-wrap
       background: rgba(255,255,255,.9)
       padding: 3px 0
-      width: 15%
+      width: 12%
       display: inline-block
       vertical-align: bottom
       text-align: center
+      @include respond-to(desktop)
+        img
+          width: 127px
       .logo
         display: block
         border-top: 1px solid #767676
@@ -68,16 +71,22 @@ body
       background: rgba(255,255,255,.9)
       padding: 3px 0
       text-align: center
-      width: 74%
+      width: 76%
+      @include respond-to(desktop)
+        vertical-align: bottom
       ul
         border-top: 1px solid #767676
         border-bottom: 1px solid #767676
-        padding: 11px 20px 9px
+        padding: 16px 20px 14px
+        @include respond-to(desktop)
+          padding: 15px 10px 14px !important
         li
           display: inline-block
           margin-right: 35px
           &:last-child
             margin-right: 0
+          @include respond-to(desktop)
+            margin-right: 15px !important
           a
             font-size: 15px
             font-family: $font-myslc-bold
@@ -86,6 +95,8 @@ body
             letter-spacing: -0.025em
             &:hover
               color: $gold
+            @include respond-to(desktop)
+              font-size: 13px !important
         .active
           a
             color: $gold
@@ -94,11 +105,13 @@ body
       background: rgba(255,255,255,.9)
       padding: 3px 0
       text-align: right
-      width: 11%
+      width: 12%
       .lang
         border-top: 1px solid #767676
         border-bottom: 1px solid #767676
-        padding: 11px 20px 9px 0
+        padding: 16px 20px 14px 0
+        @include respond-to(desktop)
+          padding: 15px 20px 14px 0 !important
         a
           display: inline-block
           margin-right: 10px
@@ -108,19 +121,35 @@ body
           color: #959595
           text-transform: uppercase
           font-family: $font-myslc-bold
+          @include respond-to(desktop)
+            font-size: 13px !important
         .active
           color: $gold
+  .header-scroll
+    bottom: auto
+    top: 0
+    nav,.lang-wrap
+      vertical-align: top
+    nav
+      width: 80%
+      text-align: center
+    .logo-wrap
+      width: 8%
   .owl-carousel
     position: relative
     overflow: hidden
-    background-attachment: fixed
     .slide-1,.slide-2,.slide-3
       background: url("../images/slide-1.jpg") no-repeat 50% 0
       height: 1080px
+      @include respond-to(desktop)
+        height: 740px
       .text-center
         width: 1100px
         margin: 0 auto
         padding-top: 250px
+        @include respond-to(desktop)
+          width: 100%
+          padding: 200px 15px 0
         .text-wrap
           width: 480px
           background: rgba(255,255,255,.7)
@@ -135,9 +164,15 @@ body
             font-size: 16px
             line-height: 24px
     .slide-2
-      background: url("../images/slide-2.jpg")
+      background: url("../images/slide-2.jpg") no-repeat
+      background-size: contain
+      @include respond-to(desktop)
+        height: 740px
     .slide-3
-      background: url("../images/slide-3.jpg")
+      background: url("../images/slide-3.jpg") no-repeat
+      background-size: contain
+      @include respond-to(desktop)
+        height: 740px
     .owl-nav
       position: absolute
       right: 50px
@@ -167,14 +202,20 @@ body
 .collections
   background: $white
   padding: 59px 0 0
+  @include respond-to(desktop)
+    padding: 35px 15px 0
   .collections-center
     width: 1100px
     margin: 0 auto
+    @include respond-to(desktop)
+      width: 100%
     .title-wrap
       position: relative
       width: 966px
       float: right
       z-index: 1
+      @include respond-to(desktop)
+        width: 910px
       p
         font-size: 65px
         font-family: $font-romul
@@ -184,6 +225,8 @@ body
         float: left
         position: relative
         z-index: 1
+        @include respond-to(desktop)
+          font-size: 55px
         &:after
           content: ""
           width: 310px
@@ -192,6 +235,9 @@ body
           position: absolute
           bottom: -14px
           left: 43%
+          @include respond-to(desktop)
+            bottom: -10px
+            left: 37%
       .title-descr
         width: 428px
         float: right
@@ -204,6 +250,8 @@ body
         letter-spacing: -0.01em
         position: relative
         z-index: 1
+        @include respond-to(desktop)
+          margin-top: 58px
       .title-shadow
         font-size: 130px
         color: #f8f8f8
@@ -213,6 +261,9 @@ body
         top: 0
         left: 30px
         letter-spacing: -0.01em
+        @include respond-to(desktop)
+          font-size: 110px
+          left: 70px
     .coll-img
       background: url("../images/collections-img.jpg") no-repeat
       width: 494px
@@ -220,11 +271,18 @@ body
       float: left
       margin-left: -136px
       margin-top: -84px
+      @include respond-to(desktop)
+        margin-left: -188px
+        height: 900px
+        margin-right: -50px
     .coll-list
       width: 715px
       float: right
       text-align: right
       margin-top: 57px
+      @include respond-to(desktop)
+        width: 638px
+        margin-right: 50px
       li
         width: 336px
         height: 336px
@@ -239,11 +297,17 @@ body
         transition-duration: .4s
         &:nth-child(even)
           margin-right: 0
+        @include respond-to(desktop)
+          width: 300px
+          height: 300px
         .img-wrap
           width: 326px
           height: 326px
           @include border-radius(50%)
           overflow: hidden
+          @include respond-to(desktop)
+            width: 290px
+            height: 290px
           img
             width: 100%
             @include transition(all,.6s,linear)
@@ -277,6 +341,9 @@ body
           opacity: 0
           @include transition(all,.5s,linear)
           transition-duration: .5s
+          @include respond-to(desktop)
+            width: 290px
+            height: 290px
         &:hover
           border-color: $gold
           span
@@ -295,6 +362,9 @@ body
       margin-right: 32px
       @include transition(all,.4s,linear)
       transition-duration: .4s
+      @include respond-to(desktop)
+        margin-right: 50px
+        margin-top: 20px
       &:after
         content: ""
         width: 47px
@@ -314,13 +384,20 @@ body
 .about
   background: fixed url("../images/about-bg.jpg") no-repeat 50% 0
   padding: 61px 0 70px
+  @include respond-to(desktop)
+    padding: 40px 15px
   .about-center
     width: 1100px
     margin: 0 auto
+    @include respond-to(desktop)
+      width: 100%
+      text-align: center
     .title-wrap
       position: relative
       width: 855px
       margin: 0 auto 82px
+      @include respond-to(desktop)
+        margin-bottom: 55px
       p
         font-size: 65px
         font-family: $font-romul
@@ -330,6 +407,8 @@ body
         float: left
         position: relative
         z-index: 1
+        @include respond-to(desktop)
+          font-size: 55px
         &:after
           content: ""
           width: 310px
@@ -338,6 +417,9 @@ body
           position: absolute
           bottom: -14px
           left: 38%
+          @include respond-to(desktop)
+            bottom: -10px
+            left: 42%
       .title-descr
         width: 428px
         float: right
@@ -350,6 +432,9 @@ body
         letter-spacing: -0.01em
         position: relative
         z-index: 1
+        @include respond-to(desktop)
+          margin-top: 58px
+          text-align: left
       .title-shadow
         font-size: 130px
         color: rgba(43,43,43,.4)
@@ -359,17 +444,26 @@ body
         top: 0
         left: 30px
         letter-spacing: -0.01em
+        @include respond-to(desktop)
+          font-size: 110px
+          left: 50px
     .text-about
       width: 490px
       display: inline-block
       vertical-align: top
       margin-right: 52px
+      @include respond-to(desktop)
+        width: 425px
+        margin-right: 30px
+        text-align: left
       p
         font-size: 16px
         color: $white
         line-height: 24px
         margin-bottom: 12px
         font-family: $font-light
+        @include respond-to(desktop)
+          font-size: 15px
       .go-to-category
         font-size: 18px
         color: $white
@@ -382,6 +476,8 @@ body
         float: right
         @include transition(all,.4s,linear)
         transition-duration: .4s
+        @include respond-to(desktop)
+          margin-top: 0
         &:after
           content: ""
           width: 47px
@@ -404,12 +500,20 @@ body
       height: 572px
       display: inline-block
       margin-top: -4px
+      @include respond-to(desktop)
+        background-size: contain
+        width: 470px
+        height: 497px
 .news
   background: $white
   padding: 48px 0 59px
+  @include respond-to(desktop)
+    padding: 35px 15px
   .news-center
     width: 1100px
     margin: 0 auto
+    @include respond-to(desktop)
+      width: 100%
     .title-wrap
       position: relative
       width: 900px
@@ -423,6 +527,8 @@ body
         float: left
         position: relative
         z-index: 1
+        @include respond-to(desktop)
+          font-size: 55px
         &:after
           content: ""
           width: 310px
@@ -431,6 +537,9 @@ body
           position: absolute
           bottom: -14px
           left: 36%
+          @include respond-to(desktop)
+            bottom: -10px
+            left: 37%
       .title-descr
         width: 428px
         float: right
@@ -443,6 +552,8 @@ body
         letter-spacing: -0.01em
         position: relative
         z-index: 1
+        @include respond-to(desktop)
+          margin-top: 58px
       .title-shadow
         font-size: 130px
         color: #f8f8f8
@@ -452,10 +563,15 @@ body
         top: 0
         left: 30px
         letter-spacing: -0.01em
+        @include respond-to(desktop)
+          font-size: 110px
+          left: 50px
     .news-wrap
       margin-top: 74px
       font-size: 0
       text-align: center
+      @include respond-to(desktop)
+        margin-top: 45px
       .main-news,.sub-news
         width: 540px
         height: 650px
@@ -463,6 +579,9 @@ body
         vertical-align: top
         position: relative
         text-align: left
+        @include respond-to(desktop)
+          width: 473px
+          overflow: hidden
         .title-news
           position: absolute
           bottom: 0
@@ -486,6 +605,8 @@ body
             color: $white
         img
           width: 100%
+          @include respond-to(desktop)
+            width: auto
       .sub-news
         height: auto
         position: static
@@ -504,6 +625,9 @@ body
       float: right
       @include transition(all,.4s,linear)
       transition-duration: .4s
+      @include respond-to(desktop)
+        margin-top: 30px
+        margin-right: 45px
       &:after
         content: ""
         width: 47px
@@ -524,13 +648,19 @@ body
   .partners-title-wrap
     background: fixed url("../images/for-partners-bg.jpg") no-repeat 50% 0
     padding: 68px 0 49px
+    @include respond-to(desktop)
+      padding: 40px 15px
     .partners-center
       width: 1100px
       margin: 0 auto
+      @include respond-to(desktop)
+        width: 100%
       .title-wrap
         position: relative
         width: 952px
         margin: 0 auto
+        @include respond-to(desktop)
+          width: 910px
         p
           font-size: 65px
           font-family: $font-romul
@@ -540,6 +670,8 @@ body
           float: left
           position: relative
           z-index: 1
+          @include respond-to(desktop)
+            font-size: 55px
           &:after
             content: ""
             width: 310px
@@ -548,6 +680,8 @@ body
             position: absolute
             bottom: -14px
             left: 38%
+            @include respond-to(desktop)
+              bottom: -10px
         .title-descr
           width: 428px
           float: right
@@ -560,6 +694,8 @@ body
           letter-spacing: -0.01em
           position: relative
           z-index: 1
+          @include respond-to(desktop)
+            margin-top: 58px
         .title-shadow
           font-size: 130px
           color: rgba(0,0,0,.15)
@@ -569,6 +705,9 @@ body
           top: 0
           left: 30px
           letter-spacing: -0.01em
+          @include respond-to(desktop)
+            font-size: 110px
+            left: 45px
       .go-to-category
         font-size: 18px
         color: $white
@@ -581,6 +720,8 @@ body
         float: right
         @include transition(all,.4s,linear)
         transition-duration: .4s
+        @include respond-to(desktop)
+          margin-top: 40px
         &:after
           content: ""
           width: 47px
@@ -599,14 +740,22 @@ body
             background: $white
   .partners-info
     padding: 53px 0 55px
+    @include respond-to(desktop)
+      padding: 40px 15px
     ul
       width: 1100px
       margin: 0 auto
+      @include respond-to(desktop)
+        width: 100%
+        text-align: center
       li
         width: 305px
         display: inline-block
         vertical-align: top
         margin-right: 82px
+        @include respond-to(desktop)
+          width: 280px
+          margin-right: 47px
         &:last-child
           margin-right: 0
         >.p-title
@@ -662,10 +811,15 @@ body
 .slogan-block
   background: fixed url("../images/slogan-bg.jpg") no-repeat 50% 0
   height: 499px
+  @include respond-to(desktop)
+    height: 440px
   .slogan-center
     width: 1100px
     margin: 0 auto
     padding-top: 154px
+    @include respond-to(desktop)
+      width: 100%
+      padding: 154px 15px 0
     p
       width: 540px
       font-size: 48px
@@ -681,9 +835,14 @@ footer
     border-top: 1px solid #767676
     border-bottom: 1px solid #767676
     padding: 13px 0 9px
+    @include respond-to(desktop)
+      padding: 13px 15px 9px
     .footer-center
       width: 1100px
       margin: 0 auto
+      @include respond-to(desktop)
+        width: 100%
+        text-align: center
       .f-links
         width: 280px
         display: inline-block
@@ -700,6 +859,8 @@ footer
         display: inline-block
         vertical-align: top
         margin: 0 217px
+        @include respond-to(desktop)
+          margin: 0 138px
       p+p
         margin: 0
         display: inline-block
@@ -711,7 +872,7 @@ footer
 
 #back-top
   position: fixed
-  bottom: 30px
+  bottom: 70px
   right: 2%
   a
     width: 37px
@@ -735,8 +896,8 @@ footer
 .wrapper-h
   background: $white
   padding-top: 4px
-  overflow: hidden
   position: relative
+  overflow: hidden
   .inner-header
     border-top: 1px solid #767676
     height: 100px
@@ -766,12 +927,14 @@ footer
         vertical-align: top
         background: $white
         border-bottom: 1px solid #767676
-        padding: 12px 0 10px 20px
+        padding: 12px 0 0 20px
         width: 870px
+        position: relative
         ul
           li
             display: inline-block
             margin-right: 35px
+            padding-bottom: 10px
             &:last-child
               margin-right: 0
             a
@@ -782,6 +945,25 @@ footer
               letter-spacing: -0.025em
               &:hover
                 color: $gold
+            .drop
+              display: none
+              width: 100%
+              position: absolute
+              bottom: -42px
+              left: 0
+              background: $gold
+              text-align: left
+              z-index: 5
+              padding: 11px 20px 9px
+              li
+                padding-bottom: 0
+                a
+                  color: $white
+                  font-family: $font-regular
+                  font-size: 15px
+                  text-transform: none
+                  &:hover
+                    text-decoration: underline
           .active
             a
               color: $gold
@@ -1292,3 +1474,99 @@ footer
             border-color: $gold
             &:after
               background: $grey
+
+@media only screen and (max-width: 1310px)
+  .wrapper
+    header
+      nav
+        ul
+          padding: 11px 15px
+          li
+            margin-right: 24px
+            a
+              font-size: 14px
+      .lang-wrap
+        .lang
+          padding: 11px 20px 11px 0
+          a
+            font-size: 14px
+
+.modal-window
+  display: none
+  width: 400px
+  position: fixed
+  top: 50%
+  left: 50%
+  margin-top: -150px
+  margin-left: -200px
+  opacity: 0
+  background: $gold
+  z-index: 12
+  text-align: center
+  padding: 25px 20px
+  @include respond-to(mobile)
+    width: 320px
+    margin-left: -160px
+  .close-button
+    width: 10px
+    height: 10px
+    background: url("../images/modal-close.png") no-repeat
+    position: absolute
+    top: 10px
+    right: 10px
+    cursor: pointer
+    @include transition(all,0.2s,linear)
+    transition-duration: 0.2s
+    &:hover
+      @include transform-r(90deg)
+  h5
+    font-size: 19px
+    color: $white
+    font-family: $font-bold
+    margin-top: 5px
+    text-transform: uppercase
+  p
+    font-size: 13px
+    color: $white
+    line-height: 15px
+    margin: 10px 0 9px
+    letter-spacing: 0.01em
+  form
+    input[type="text"],
+    input[type="email"],
+    textarea
+      margin-bottom: 5px
+      background: transparent
+      padding: 8px 12px
+      resize: none
+      border: none
+      border-bottom: 1px solid $white
+      color: $white
+      font-size: 15px
+      width: 100%
+      @include placeholder
+    button[type="submit"]
+      border: none
+      width: 200px
+      padding: 8px 0 4px
+      background: $white
+      color: $grey
+      text-transform: uppercase
+      font-size: 15px
+      font-family: $font-bold
+      transition: all,0.3s,ease
+      transition-duration: 0.3s
+      margin: 16px auto 0
+      letter-spacing: 0.005em
+      &:hover
+        background: rgba(255,255,255,.8)
+.overlay
+  background: rgba(255,255,255,0.85)
+  position: fixed
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+  z-index: 11
+  display: none
+  cursor: pointer
